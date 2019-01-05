@@ -92,7 +92,7 @@ if "AUDIO_STEREO_STREAM_BITRATE" in os.environ:
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-def _log(message, level="info"):
+def _log(message, level="debug"):
     message = "LibraryOptimiser - %s" % message
     if level == "debug":
         logging.debug(message);
