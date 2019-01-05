@@ -283,16 +283,16 @@ def convert_file(input_file,output_file):
                     audio_tag = 'Stereo'
 
                 # Map a duplicated stream
-                streams_to_map = streams_to_map + [
-                        "-map",   "0:{}".format(stream['index'])
-                    ]
-
-                streams_to_create = streams_to_create + [
-                            "-c:a:{}".format(audio_tracks_count), CODEC_CONFIG[AUDIO_CODEC]['encoder'] ,
-                            "-b:a:{}".format(audio_tracks_count), AUDIO_STEREO_STREAM_BITRATE,
-                            "-ac", "2",
-                            "-metadata:s:a:{}".format(audio_tracks_count), "title='{}'".format(audio_tag),
-                        ]
+              #  streams_to_map = streams_to_map + [
+              #          "-map",   "0:{}".format(stream['index'])
+              #      ]
+#
+              #  streams_to_create = streams_to_create + [
+              #              "-c:a:{}".format(audio_tracks_count), CODEC_CONFIG[AUDIO_CODEC]['encoder'] ,
+              #              "-b:a:{}".format(audio_tracks_count), AUDIO_STEREO_STREAM_BITRATE,
+              #              "-ac", "2",
+              #              "-metadata:s:a:{}".format(audio_tracks_count), "title='{}'".format(audio_tag),
+              #          ]
             else:
                 # Force conversion of stereo audio to standard
                 streams_to_map = streams_to_map + [
