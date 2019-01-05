@@ -330,7 +330,7 @@ def convert_file(input_file,output_file):
         _log(" ".join(command))
 
     try:
-        subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=False)
     except subprocess.CalledProcessError as ex:     
         _log("subprocess.CalledProcessError")
         _log("Exception - CalledProcessError: {}".format(ex))
