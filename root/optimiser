@@ -332,6 +332,7 @@ def convert_file(input_file,output_file):
     try:
         subprocess.check_call(command)
     except subprocess.CalledProcessError:
+        _log("subprocess.CalledProcessError")
         return False
     except Exception as e: 
         _log("Exception - file_probe: {}".format(e))
