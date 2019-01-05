@@ -92,7 +92,7 @@ if "AUDIO_STEREO_STREAM_BITRATE" in os.environ:
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-def _log(message, level="debug"):
+def _log(message, level="info"):
     message = "LibraryOptimiser - %s" % message
     if level == "debug":
         logging.debug(message);
@@ -246,7 +246,7 @@ def convert_file(input_file,output_file):
 
     # Set output
     #TODO: Check if we need '-nostats' here also
-    command = command + ["-hide_banner", "-loglevel", "info", "-strict", "-2"]
+    command = command + ["-hide_banner", "-loglevel", "debug", "-strict", "-2"]
 
     # Read stream data
     streams_to_map      = []
