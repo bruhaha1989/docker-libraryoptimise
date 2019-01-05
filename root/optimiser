@@ -246,7 +246,7 @@ def convert_file(input_file,output_file):
 
     # Set output
     #TODO: Check if we need '-nostats' here also
-    command = command + ["-hide_banner", "-loglevel", "debug", "-strict", "-2"]
+    command = command + ["-hide_banner", "-loglevel", "verbose", "-strict", "-2"]
 
     # Read stream data
     streams_to_map      = []
