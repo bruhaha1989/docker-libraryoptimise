@@ -333,7 +333,7 @@ def convert_file(input_file,output_file):
         subprocess.check_call(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as ex:     
         _log("subprocess.CalledProcessError")
-        print "Ping stdout output:\n", ex.output
+        _log("Exception - CalledProcessError: {}".format(ex))
         return False
     except Exception as e: 
         _log("Exception - file_probe: {}".format(e))
